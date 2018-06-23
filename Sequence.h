@@ -14,7 +14,7 @@ class Sequence
      ~Sequence();
      int length();
      int numberOf(char);
-     //        string longestConsecutive();
+     string longestConsecutive();
      //        string longestRepeated();
     private:
      ifstream file;
