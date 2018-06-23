@@ -44,7 +44,7 @@ void Sequence::read()
 	    }
 	    //    cout << s;
     }
-
+/*
 string Sequence::longestConsecutive()
     {
         string longest;
@@ -68,3 +68,38 @@ string Sequence::longestConsecutive()
         }
 	return longest;
     }
+*/
+//Another method of longestConsecutive()
+
+string Sequence::longestConsecutive()
+    {
+        string longest;
+	longest.clear();
+	char max='Q';
+	char base='Q';
+	long long slength = s.length();
+	int count=0;
+	int mcount=0;
+	for(int i = 0;i < slength;++i)
+	{
+	if(base == s[i])
+	count++;
+	else
+	{
+	if(count>mcount)
+	{
+	max = base;
+	mcount = count;
+	}
+	base = s[i];
+	count = 1;
+	}
+	}
+	for(int i = 0;i < mcount;++i)
+	{
+	longest = longest + max;
+	}
+	cout << mcount <<endl;
+	return longest;
+    }
+
