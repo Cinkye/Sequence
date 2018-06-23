@@ -1,0 +1,18 @@
+#include <iostream>
+#include "Sequence.h"
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    Sequence test("test.txt");
+    cout << "Testing function length()" << endl;
+    cout << "The length of the file is " << test.length() << endl << endl;
+    cout << "Testing function numberOF()" << endl;
+    char base;
+    cout << "Input the letter you want to know the number of..." << endl;
+    cout << test.numberOf(base);
+    return 0;
+}
+
