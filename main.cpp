@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     Sequence test("test.txt");
-    clock_t s,e;
+    clock_t s,e,a,b;
     s = clock();
     cout << "--------Testing function length()--------" << endl << endl;
     cout << "The length of the file is " << test.length() << endl << endl;
@@ -20,7 +20,11 @@ int main()
     cout << test.longestConsecutive() << endl;
     e = clock();
     cout << "Time used: " << (double)(e-s)/(double)CLOCKS_PER_SEC << endl;
-    //std::cout << e << endl << s << endl << CLOCKS_PER_SEC << endl;
+    cout << "--------Testing function longestRepeated()--------" << endl << endl;
+    a = clock();
+    cout << test.longestRepeated() << endl;
+    b = clock();
+    cout << "Time used: " << (double)(b-a)/(double)CLOCKS_PER_SEC << endl;
     return 0;
 }
 
